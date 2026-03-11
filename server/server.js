@@ -28,7 +28,15 @@ app.set("io", io);
 
 connectDB();
 
-app.use(cors());
+// CORS configuration — allow live frontend
+const corsOptions = {
+    origin: "https://servix-uqs5.onrender.com",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // handle preflight requests
 app.use(express.json());
 
 app.get("/", (req, res) => {
