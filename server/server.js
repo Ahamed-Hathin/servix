@@ -18,7 +18,7 @@ const server = http.createServer(app);
 // Initialize Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "https://servix-uqs5.onrender.com",
         methods: ["GET", "POST", "PUT"],
     },
 });
