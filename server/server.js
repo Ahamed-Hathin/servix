@@ -15,6 +15,17 @@ const chatbotRoutes = require("./routes/chatbotRoutes");
 const app = express();
 const server = http.createServer(app);
 
+// ─── CORS (must be FIRST, before anything else) ─────────────
+const corsOptions = {
+    origin: "https://servix-uqs5.onrender.com",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+app.use(express.json());
+
 // Initialize Socket.IO
 const io = new Server(server, {
     cors: {
@@ -26,18 +37,8 @@ const io = new Server(server, {
 // Store io on app so controllers can access it via req.app.get("io")
 app.set("io", io);
 
+// Connect to MongoDB
 connectDB();
-
-// CORS configuration — allow live frontend
-const corsOptions = {
-    origin: "https://servix-uqs5.onrender.com",
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-};
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // handle preflight requests
-app.use(express.json());
 
 app.get("/", (req, res) => {
     res.json({ message: "Servix — Trusted Home Services Marketplace API" });
