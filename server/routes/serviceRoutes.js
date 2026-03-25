@@ -4,7 +4,7 @@ const { protect } = require("../middleware/auth");
 
 const router = express.Router();
 
-router.get("/", protect, getServices);
+router.get("/", getServices);
 router.get("/:id", protect, getServiceById);
 
 module.exports = router;

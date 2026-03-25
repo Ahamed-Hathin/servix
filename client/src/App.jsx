@@ -48,6 +48,7 @@ export default function App() {
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
+                <Route path="/index.html" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route
