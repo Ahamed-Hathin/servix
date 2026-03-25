@@ -15,7 +15,7 @@ const testimonials = [
         city: "Coimbatore",
         role: "Business Owner",
         rating: 5,
-        text: "We use Servix for all our office maintenance. The subscription plan has saved us thousands. Highly recommend!",
+        text: "We use SERVEFIX for all our office maintenance. The subscription plan has saved us thousands. Highly recommend!",
         avatar: "RK",
         service: "Maintenance",
     },

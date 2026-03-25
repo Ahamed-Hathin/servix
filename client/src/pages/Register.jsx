@@ -41,7 +41,7 @@ export default function Register() {
                         <HiOutlineBolt className="w-8 h-8 text-white" />
                     </div>
                     <h1 className="text-2xl font-bold text-gray-800">Create your account</h1>
-                    <p className="text-gray-500 mt-1">Join the Servix marketplace</p>
+                    <p className="text-gray-500 mt-1">Join the SERVEFIX marketplace</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="card space-y-4">

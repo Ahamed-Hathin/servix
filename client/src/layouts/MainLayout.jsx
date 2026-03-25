@@ -96,7 +96,7 @@ export default function MainLayout() {
                                 </span>
                             </Link>
                             <p className="text-sm leading-relaxed max-w-xs mb-6">
-                                Servix — Trusted Home Services Marketplace.
+                                SERVEFIX — Trusted Home Services Marketplace.
                                 Book verified local professionals in minutes
                                 across Tamil Nadu.
                             </p>
@@ -106,7 +106,7 @@ export default function MainLayout() {
                                 <div className="flex items-center gap-2.5">
                                     <HiOutlineEnvelope className="w-4 h-4 text-primary-400 shrink-0" />
                                     <span className="text-sm hover:text-white transition-colors">
-                                        support@servix.in
+                                        support@servefix.in
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2.5">
@@ -160,7 +160,7 @@ export default function MainLayout() {
                     {/* Bottom bar */}
                     <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-gray-500">
-                            © 2025 Servix. All rights reserved.
+                            © 2025 SERVEFIX. All rights reserved.
                         </p>
                         <div className="flex items-center gap-6">
                             <span className="text-sm hover:text-white transition-colors cursor-pointer">

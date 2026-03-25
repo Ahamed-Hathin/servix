@@ -34,7 +34,7 @@ export default function Chatbot() {
             setMessages([
                 {
                     role: "bot",
-                    text: "Hi 👋 I'm the Servix Assistant.\nHow can I help you today?",
+                    text: "Hi 👋 I'm the SERVEFIX Assistant.\nHow can I help you today?",
                     time: new Date(),
                 },
             ]);
@@ -142,7 +142,7 @@ export default function Chatbot() {
                                 <HiOutlineSparkles className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white text-sm">Servix Assistant</h3>
+                                <h3 className="font-bold text-white text-sm">SERVEFIX Assistant</h3>
                                 <div className="flex items-center gap-1.5">
                                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                                     <span className="text-xs text-white/70">Online</span>

@@ -18,7 +18,7 @@ export default function DownloadApp() {
                             Coming Soon
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-                            Get the Servix App
+                            Get the SERVEFIX App
                         </h2>
                         <p className="text-white/60 mt-4 max-w-lg leading-relaxed">
                             Book home services on the go. Download our mobile app for the best experience with exclusive features and offers.
@@ -60,7 +60,7 @@ export default function DownloadApp() {
                                     <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4 backdrop-blur">
                                         <HiOutlineDevicePhoneMobile className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-white font-bold text-lg text-center">Servix</h3>
+                                    <h3 className="text-white font-bold text-lg text-center">SERVEFIX</h3>
                                     <p className="text-white/50 text-xs text-center mt-1">Home Services</p>
                                     <div className="mt-6 space-y-2 w-full">
                                         {[1, 2, 3].map((i) => (

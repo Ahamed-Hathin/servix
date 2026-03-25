@@ -42,7 +42,7 @@ export default function Navbar() {
                                 <HiOutlineBolt className="w-5 h-5 text-white" />
                             </div>
                             <span className="font-bold text-xl text-gray-800 dark:text-white hidden sm:inline">
-                                Ser<span className="text-primary-600 dark:text-primary-400">vix</span>
+                                SERVE<span className="text-primary-600 dark:text-primary-400">FIX</span>
                             </span>
                         </Link>
 

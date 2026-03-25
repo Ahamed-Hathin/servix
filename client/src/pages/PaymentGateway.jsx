@@ -230,7 +230,7 @@ export default function PaymentGateway() {
                         <div>
                             <h1 className="text-lg font-bold text-gray-800 flex items-center gap-2">
                                 <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent">
-                                    Servix Pay
+                                    SERVEFIX Pay
                                 </span>
                             </h1>
                             <p className="text-xs text-gray-400">Secure Payment Gateway</p>

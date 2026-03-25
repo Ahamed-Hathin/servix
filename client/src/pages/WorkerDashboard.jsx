@@ -51,7 +51,7 @@ export default function WorkerDashboard() {
     useEffect(() => {
         if (!profile?._id) return;
 
-        const socket = socketIO("https://servix-backend-8zpk.onrender.com");
+        const socket = socketIO(import.meta.env.VITE_SOCKET_URL || "http://localhost:5000");
         socketRef.current = socket;
 
         socket.emit("joinRoom", profile._id);

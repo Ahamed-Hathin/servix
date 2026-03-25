@@ -3,7 +3,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 // Initialize Gemini — API key stays on backend only
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const SYSTEM_PROMPT = `You are a friendly AI assistant for "Servix" — a trusted home services marketplace website based in Tamil Nadu, India. 
+const SYSTEM_PROMPT = `You are a friendly AI assistant for "SERVEFIX" — a trusted home services marketplace website based in Tamil Nadu, India. 
 
 Your role:
 - Help users understand how to book services (plumbing, electrical, cleaning, painting, etc.)

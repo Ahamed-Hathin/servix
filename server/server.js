@@ -17,7 +17,12 @@ const server = http.createServer(app);
 
 // ─── CORS (must be FIRST, before anything else) ─────────────
 const corsOptions = {
-    origin: "https://servix-uqs5.onrender.com",
+    origin: [
+        "http://localhost:5173",
+        "http://localhost:5174",
+        process.env.CLIENT_URL,
+        "https://servix-uqs5.onrender.com"
+    ].filter(Boolean),
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -29,7 +34,12 @@ app.use(express.json());
 // Initialize Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: "https://servix-uqs5.onrender.com",
+        origin: [
+            "http://localhost:5173",
+            "http://localhost:5174",
+            process.env.CLIENT_URL,
+            "https://servix-uqs5.onrender.com"
+        ].filter(Boolean),
         methods: ["GET", "POST", "PUT"],
     },
 });
@@ -41,7 +51,7 @@ app.set("io", io);
 connectDB();
 
 app.get("/", (req, res) => {
-    res.json({ message: "Servix — Trusted Home Services Marketplace API" });
+    res.json({ message: "SERVEFIX — Trusted Home Services Marketplace API" });
 });
 
 app.use("/api/auth", authRoutes);

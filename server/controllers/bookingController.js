@@ -378,7 +378,7 @@ const generateInvoice = asyncHandler(async (req, res) => {
     res.setHeader("Content-Disposition", `attachment; filename=invoice-${booking._id}.pdf`);
     doc.pipe(res);
 
-    const PLATFORM_NAME = "Servix";
+    const PLATFORM_NAME = "SERVEFIX";
 
     // Header
     doc.fontSize(24).font("Helvetica-Bold").text(PLATFORM_NAME, { align: "center" });

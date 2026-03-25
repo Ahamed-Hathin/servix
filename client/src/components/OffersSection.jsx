@@ -4,7 +4,7 @@ const offers = [
     {
         icon: HiOutlineGift,
         title: "20% Off First Booking",
-        description: "New to Servix? Get flat 20% off on your first service booking.",
+        description: "New to SERVEFIX? Get flat 20% off on your first service booking.",
         bg: "bg-gradient-to-br from-indigo-500 to-indigo-700",
         badge: "NEW USER",
     },

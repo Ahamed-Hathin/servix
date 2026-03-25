@@ -46,7 +46,7 @@ export default function TrustSection() {
                         Why Us
                     </span>
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-                        Why Choose Servix?
+                        Why Choose SERVEFIX?
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 mt-3 max-w-xl mx-auto">
                         The simplest way to get things done at home — trusted by
