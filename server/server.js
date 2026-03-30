@@ -20,7 +20,7 @@ const corsOptions = {
         "http://localhost:5173",
         "http://localhost:5174",
         process.env.CLIENT_URL,
-        "https://servix-uqs5.onrender.com"
+        "https://servix-server.onrender.com"
     ].filter(Boolean),
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -37,7 +37,7 @@ const io = new Server(server, {
             "http://localhost:5173",
             "http://localhost:5174",
             process.env.CLIENT_URL,
-            "https://servix-uqs5.onrender.com"
+            "https://servix-server.onrender.com"
         ].filter(Boolean),
         methods: ["GET", "POST", "PUT"],
     },

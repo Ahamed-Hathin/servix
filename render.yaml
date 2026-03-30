@@ -10,12 +10,10 @@ services:
       - key: PORT
         value: 5000
       - key: CLIENT_URL
-        value: https://servix-uqs5.onrender.com
+        value: https://servix-server.onrender.com
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
-        sync: false
-      - key: GEMINI_API_KEY
         sync: false
 
   # Frontend Static Site
@@ -27,9 +25,9 @@ services:
     publishDir: dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://servix-backend-8zpk.onrender.com/api
+        value: https://servix-college-project.onrender.com/api
       - key: VITE_SOCKET_URL
-        value: https://servix-backend-8zpk.onrender.com
+        value: https://servix-college-project.onrender.com
     routes:
       - type: rewrite
         source: /*
