@@ -15,13 +15,24 @@ const app = express();
 const server = http.createServer(app);
 
 // ─── CORS (must be FIRST, before anything else) ─────────────
+const allowedOrigins = [
+    "https://servix-server.onrender.com",
+    "https://servix-uqs5.onrender.com",
+    "http://localhost:5173",
+    "http://localhost:5174",
+    process.env.CLIENT_URL,
+].filter(Boolean);
+
 const corsOptions = {
-    origin: [
-        "http://localhost:5173",
-        "http://localhost:5174",
-        process.env.CLIENT_URL,
-        "https://servix-server.onrender.com"
-    ].filter(Boolean),
+    origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -33,12 +44,7 @@ app.use(express.json());
 // Initialize Socket.IO
 const io = new Server(server, {
     cors: {
-        origin: [
-            "http://localhost:5173",
-            "http://localhost:5174",
-            process.env.CLIENT_URL,
-            "https://servix-server.onrender.com"
-        ].filter(Boolean),
+        origin: allowedOrigins,
         methods: ["GET", "POST", "PUT"],
     },
 });
